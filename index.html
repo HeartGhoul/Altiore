@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Altioré — El tiempo es lujo</title>
+<style>
+  body {
+    margin: 0;
+    background: radial-gradient(circle at top left, #2a2a2a, #000);
+    color: white;
+    font-family: 'Playfair Display', serif;
+    overflow-x: hidden;
+  }
+  header {
+    text-align: center;
+    padding: 60px 20px 40px;
+    animation: fadeIn 2s ease-in-out;
+  }
+  header img {
+    width: 130px;
+    max-width: 40%;
+    filter: drop-shadow(0 0 10px gold);
+    animation: logoGlow 4s infinite alternate;
+  }
+  @keyframes logoGlow {
+    from { filter: drop-shadow(0 0 5px #caa63a); }
+    to { filter: drop-shadow(0 0 20px #ffde7a); }
+  }
+  h1 {
+    color: #caa63a;
+    font-size: 2rem;
+    margin-top: 10px;
+    letter-spacing: 1px;
+  }
+  h2 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    color: #e5e5e5;
+    font-size: 1.1rem;
+    margin: 10px 0;
+    animation: fadeIn 3s ease-in-out;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .catalogo {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 40px 10px 80px;
+    background: linear-gradient(to bottom, rgba(202,166,58,0.05), rgba(0,0,0,1));
+  }
+  .reloj {
+    background: rgba(202,166,58,0.1);
+    border: 1px solid #caa63a33;
+    border-radius: 20px;
+    padding: 15px;
+    width: 90%;
+    max-width: 280px;
+    text-align: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+  .reloj:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px rgba(202,166,58,0.4);
+  }
+  .reloj img {
+    width: 100%;
+    border-radius: 15px;
+  }
+  footer {
+    text-align: center;
+    padding: 30px 20px 60px;
+    font-size: 0.8rem;
+    color: #999;
+  }
+  /* Botón flotante WhatsApp */
+  .whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    right: 20px;
+    background-color: #caa63a;
+    color: black;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0 0 20px rgba(202,166,58,0.4);
+    transition: all 0.3s ease;
+    z-index: 100;
+  }
+  .whatsapp-float:hover {
+    background-color: #ffde7a;
+    transform: scale(1.1);
+  }
+  .whatsapp-float i {
+    margin-top: 15px;
+  }
+  @media (min-width: 768px) {
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 1.2rem; }
+    .reloj { width: 280px; }
+  }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <header>
+    <img src="logo-altioré.png" alt="Altioré Logo">
+    <h1>Altioré</h1>
+    <h2>El tiempo es lujo.</h2>
+  </header>
+
+  <section class="catalogo">
+    <div class="reloj">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Wristwatch_gold_black.jpg" alt="Reloj dorado 1">
+    </div>
+    <div class="reloj">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Men%27s_black_and_gold_watch.jpg" alt="Reloj dorado 2">
+    </div>
+    <div class="reloj">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Gold_black_watch.jpg" alt="Reloj dorado 3">
+    </div>
+  </section>
+
+  <a href="https://wa.me/573116080813?text=Hola%20Altior%C3%A9!" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <footer>
+    © 2025 Altioré — Todos los derechos reservados.
+  </footer>
+</body>
+</html>
